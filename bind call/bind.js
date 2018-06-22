@@ -5,11 +5,7 @@
 //     };
 // };
 
-// Function.prototype.bind2 = function(caller, ...args){
-//     return (...args2) => this.call(caller, ...args, ...args2);
-// };
-
-Function.bind2 = (caller, ...args) => {
+Function.prototype.bind2 = function(caller, ...args){
     return (...args2) => this.call(caller, ...args, ...args2);
 };
 
