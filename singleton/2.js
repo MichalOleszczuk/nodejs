@@ -1,3 +1,3 @@
-const mySingleton = require('./singleton').singleton;
+const mySingleton = require("./singleton").singleton;
 
 exports.two = mySingleton;

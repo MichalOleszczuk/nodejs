@@ -1,0 +1,73 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch async_class_builder",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["async_class_builder/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch async_vs_generator",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["async_vs_generator/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch bind_call_apply",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["bind_call_apply/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "name": "Unit testing",
+      "request": "launch",
+      "args": ["--config", "./test/unit/jest.config.js", "--runInBand"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "outputCapture": "std"
+    },
+    {
+      "name": "Build",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["scripts/build/build.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    }
+  ]
+}
