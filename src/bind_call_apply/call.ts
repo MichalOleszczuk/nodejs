@@ -7,8 +7,8 @@ import { getRandomKey } from "./utils/getRandomKey";
 import { isObject } from "./utils/isObject";
 import { logThis } from "./utils/logThis";
 
-Function.prototype.call2 = function (_context: any) {
-  const context = isObject(_context) ? _context : {};
+Function.prototype.call2 = function (callerContext: any) {
+  const context = isObject(callerContext) ? callerContext : {};
   const fnName = checkRandomKey(getRandomKey(), context);
 
   // eslint-disable-next-line prefer-rest-params

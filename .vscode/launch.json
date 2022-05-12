@@ -8,7 +8,7 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
 
-      "args": ["async_class_builder/index.ts"],
+      "args": ["src/async_class_builder/index.ts"],
       
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
@@ -22,7 +22,7 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
 
-      "args": ["async_vs_generator/index.ts"],
+      "args": ["src/async_vs_generator/index.ts"],
       
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
@@ -36,7 +36,63 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
 
-      "args": ["bind_call_apply/index.ts"],
+      "args": ["src/bind_call_apply/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch upload_server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["src/node_server_upload_test_websocket/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch singleton",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["src/singleton/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch singleton_vs_class",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["src/singleton_vs_class/index.ts"],
+      
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "outputCapture": "std"
+    },
+    {
+      "name": "Launch websocket",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
+
+      "args": ["src/websocket/index.ts"],
       
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
@@ -47,7 +103,7 @@
       "type": "node",
       "name": "Unit testing",
       "request": "launch",
-      "args": ["--config", "./test/unit/jest.config.js", "--runInBand"],
+      "args": ["src/--config", "./test/unit/jest.config.js", "--runInBand"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
@@ -62,7 +118,7 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only" ,"-r", "tsconfig-paths/register"],
 
-      "args": ["scripts/build/build.ts"],
+      "args": ["scripts/build.ts"],
       
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",

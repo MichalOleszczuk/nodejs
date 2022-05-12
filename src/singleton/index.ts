@@ -1,5 +1,6 @@
-const { one } = require("./1");
-const { two } = require("./2");
+/* eslint-disable no-console */
+import { one } from "./1";
+import { two } from "./2";
 
 const singleA = one.getInstance();
 const singleB = two.getInstance();
@@ -10,9 +11,9 @@ console.log(
 );
 
 setTimeout(() => {
-  const singleB = two.getInstance();
+  const singleB1 = two.getInstance();
   console.log(
     "Delay re import",
-    singleA.getRandomNumber() === singleB.getRandomNumber()
+    singleA.getRandomNumber() === singleB1.getRandomNumber()
   );
 }, 3000);

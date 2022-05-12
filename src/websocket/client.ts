@@ -1,14 +1,17 @@
-const WebSocket = require("ws");
+/* eslint-disable no-console */
+import * as WebSocket from "ws";
 
 const ws = new WebSocket("ws://localhost:3000/hereIsWS", {
   rejectUnauthorized: false,
 });
+
 // event emmited when connected
 ws.onopen = function () {
   console.log("websocket is connected ...");
   // sending a send event to websocket server
   ws.send("Hello websocket");
 };
+
 // event emmited when receiving message
 ws.onmessage = function (ev) {
   console.log(ev.data);

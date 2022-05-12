@@ -1,7 +1,8 @@
+/* eslint-disable no-new-object */
+/* eslint-disable no-console */
 let x = null;
 
-module.exports =
-  x ||
+export = x ||
   (() => {
     console.log("Witaj! Wyswietle sie raz, ale nie jestem singletonem :(");
     setTimeout(

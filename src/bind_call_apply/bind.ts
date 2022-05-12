@@ -5,15 +5,15 @@
 import "./global";
 import { logThis } from "./utils/logThis";
 
-Function.prototype.bind2ES5 = function (context: any, ...args: any) {
+Function.prototype.bind2ES5 = function (callerContext: any, ...args: any) {
   const self = this;
   return function (...args2: any) {
-    return self.call(context, ...args, ...args2);
+    return self.call(callerContext, ...args, ...args2);
   };
 };
 
-Function.prototype.bind2 = function (context: any, ...args: any) {
-  return (...args2: any) => this.call(context, ...args, ...args2);
+Function.prototype.bind2 = function (callerContext: any, ...args: any) {
+  return (...args2: any) => this.call(callerContext, ...args, ...args2);
 };
 
 const class1 = {

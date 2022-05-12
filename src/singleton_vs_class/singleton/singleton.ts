@@ -1,5 +1,7 @@
-module.exports =
-  this.x ||
+/* eslint-disable no-console */
+let x = null;
+
+export = x ||
   (() => {
     console.log("Witaj! Wyswietle sie raz, ale nie jestem singletonem :(");
     setTimeout(
@@ -9,5 +11,5 @@ module.exports =
         ),
       0
     );
-    return (this.x = null);
+    return (x = null);
   })();

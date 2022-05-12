@@ -11,10 +11,10 @@ import { isObject } from "./utils/isObject";
 import { logThis } from "./utils/logThis";
 
 Function.prototype.apply2 = function (
-  _context: Function,
+  callerContext: Function,
   ...args: Array<unknown>
 ) {
-  const context = isObject(_context) ? _context : {};
+  const context = isObject(callerContext) ? callerContext : {};
   const fnName = checkRandomKey(getRandomKey(), context);
   const args2 = args.length ? args : [];
 
