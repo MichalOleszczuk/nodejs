@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable require-await */
 /* eslint-disable import/first */
 /* eslint-disable import/newline-after-import */
@@ -7,10 +6,9 @@
  * https://stackoverflow.com/a/65708470
  */
 require("ts-node/register");
+import { setEnvVars } from "./setEnvVars";
 
 const globalSetup = async (): Promise<void> => {
-  const { setEnvVars } = await import("./setup/setEnvVars");
-
   setEnvVars();
 };
 

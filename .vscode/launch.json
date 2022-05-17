@@ -103,11 +103,21 @@
       "type": "node",
       "name": "Unit testing",
       "request": "launch",
-      "args": ["src/--config", "./test/unit/jest.config.js", "--runInBand"],
+      "args": ["--config", "./test/config/unit/jest.unit.config.ts"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
-      "disableOptimisticBPs": true,
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "name": "E2E testing",
+      "request": "launch",
+      "args": ["--config", "./test/config/e2e/jest.e2e.config.ts"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "outputCapture": "std"
     },

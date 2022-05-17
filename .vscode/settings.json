@@ -1,3 +1,3 @@
 {
-    "jestrunner.configPath": "./test/unit/jest.config.js"
+    "jestrunner.configPath": "./test/config/unit/jest.unit.config.ts"
 }
