@@ -10,9 +10,7 @@ export class MyAsyncClass {
   }
 
   static async build() {
-    const asyncResult = await Promise.resolve({}).catch((error) => {
-      throw error;
-    });
+    const asyncResult = await Promise.resolve({});
     return new MyAsyncClass(asyncResult);
   }
 }

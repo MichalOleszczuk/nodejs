@@ -1,7 +1,9 @@
 import * as http from "http";
 import * as https from "https";
 
-export function httpRequest<TResult = any>(
+export type IHttpRequest = typeof httpRequest;
+
+export function httpRequest<TResult = unknown>(
   params: http.RequestOptions,
   postData?: unknown
 ) {
@@ -24,7 +26,7 @@ export function httpRequest<TResult = any>(
         } catch (e) {
           reject(e);
         }
-        resolve(body as any);
+        resolve(body as unknown as TResult);
       });
     });
     // reject on request error
