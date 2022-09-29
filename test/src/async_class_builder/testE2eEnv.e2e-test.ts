@@ -10,6 +10,6 @@ describe("Check if jest E2E config loads", () => {
 
     expect(E2E_ENV_VARIABLE).toBeDefined();
     expect(typeof E2E_ENV_VARIABLE).toBe("string");
-    expect(E2E_ENV_VARIABLE.length).toBeGreaterThan(0);
+    expect((E2E_ENV_VARIABLE as string).length).toBeGreaterThan(0);
   }, 10000);
 });

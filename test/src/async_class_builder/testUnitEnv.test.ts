@@ -10,6 +10,6 @@ describe("Check if jest UNIT config loads", () => {
 
     expect(UNIT_ENV_VARIABLE).toBeDefined();
     expect(typeof UNIT_ENV_VARIABLE).toBe("string");
-    expect(UNIT_ENV_VARIABLE.length).toBeGreaterThan(0);
+    expect((UNIT_ENV_VARIABLE as string).length).toBeGreaterThan(0);
   }, 10000);
 });
