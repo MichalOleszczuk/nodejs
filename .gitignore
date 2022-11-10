@@ -31,4 +31,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-node_server_upload_test_websocket/upload
+node-server-upload-test-websocket/upload

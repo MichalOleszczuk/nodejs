@@ -1,6 +1,6 @@
 import { when } from "jest-when";
-import type { IHttpRequest } from "../../../src/utils/httpRequest";
-import { asyncFunction } from "../../../src/async_vs_generator/async";
+import type { IHttpRequest } from "../../../src/utils/http-request";
+import { asyncFunction } from "../../../src/async-vs-generator/async";
 
 describe("async_vs_generator", () => {
   const todos1Params = {
